@@ -12,6 +12,9 @@ import java.util.Map;
  * Created by windows equals ass on 1/29/2017.
  */
 public class ConfigReader {
+
+    String url = "http://oldschool.runescape.com/jav_config.ws";
+
     private String[] readConfig() {
         // Create the stream and reader so we can dispose of it nicely in the finally
         // Yes I could have used the new try with resources but #yolo
@@ -20,6 +23,7 @@ public class ConfigReader {
         // Create what we will return, the lines of the config to make it easier to parse
         List<String> lines = new ArrayList<>();
         try {
+
             // Create the URL instance to read the file, open the stream and init the reader
             URL configUrl = new URL(url);
             //maybe url is http://oldschool.runescape.com/jav_config.ws?
